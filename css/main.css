@@ -3,11 +3,12 @@ body{
     background-color: rgb(19, 19, 19);
     display: grid;
     justify-content: center;
-    grid-template-rows:1fr 4fr ;
+    grid-template-rows:1fr 3fr 3fr;
     grid-template-columns:0.5fr 0.5fr;
     grid-template-areas: 
     "heeder heeder"
-    "ball1 ball2";
+    "ball1 ball2"
+    "ball3 ball4";
     width: 100vw;
     
 
@@ -53,4 +54,20 @@ h1{
     font-weight: bold;
     transition:1s;
 
+}
+
+.ball3{
+    grid-area:ball3 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+
+    width: 100px;
+    height: 100px;
+    background-color: rgb(56, 127, 178);
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: bold;
 }
