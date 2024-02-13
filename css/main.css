@@ -5,3 +5,12 @@ body{
 h1{
     color: rgb(236, 234, 234);
 }
+
+.ball{
+    width: 100px;
+    height: 100px;
+    background-color: darkkhaki;
+    border-radius: 50%;
+    text-align: center;
+    margin-left: calc(50vw - 50px);
+}
