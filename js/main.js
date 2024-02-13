@@ -52,6 +52,7 @@ function onBallClick(elBall) {
 }
 
 
+
 function onThirdBall() {
     const elBall1 = document.querySelector('.ball')
     const elBall2 = document.querySelector('.ball2')
@@ -74,28 +75,26 @@ function onThirdBall() {
 function switchBall1AndBall2Size() {
     const elBall1 = document.querySelector('.ball')
     const elBall2 = document.querySelector('.ball2')
-
-    console.log('elSpan1:', elSpan1)
-    console.log('elSpan2:', elSpan2)
     
     if (!gIsBall3Clicked) {
         elBall1.style.height = gBall2CurrSize + 'px'
         elBall1.style.width = gBall2CurrSize + 'px'
-
+        elBall1.innerText =  gBall2CurrSize
         
         elBall2.style.height = gBall1CurrSize + 'px'
         elBall2.style.width = gBall1CurrSize + 'px'
+        elBall2.innerText =  gBall1CurrSize
+
 
     } else {
         elBall1.style.height = gBall1CurrSize + 'px'
         elBall1.style.width = gBall1CurrSize + 'px'
-
+        elBall1.innerText =  gBall1CurrSize
         
         elBall2.style.height = gBall2CurrSize + 'px'
         elBall2.style.width = gBall2CurrSize + 'px'
+        elBall2.innerText =  gBall2CurrSize
 
     }
     
-    console.log('elSpan1:', elSpan1)
-    console.log('elSpan2:', elSpan2)
 }
