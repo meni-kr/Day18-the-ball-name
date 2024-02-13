@@ -4,7 +4,7 @@ var gBallCurrSize = 100
 
 function onBallClick(){
     if(gBallCurrSize<400){
-     const addSize = 50
+     const addSize = getRandomInt(20, 60)
     const elBall = document.querySelector('.ball')
     const elBallTxt = document.querySelector('.ball-text')
     elBall.style.height = gBallCurrSize + addSize + 'px'
