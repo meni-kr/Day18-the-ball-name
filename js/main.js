@@ -4,6 +4,7 @@ var gBall1CurrSize = 100
 var gBall2CurrSize = 100
 const gMaxDiameter = 400
 
+
 function onBallClick(elBall) {
     const currClass = '.' + elBall.classList[0]
     const elCurrBall = document.querySelector(currClass)
@@ -39,4 +40,24 @@ function onBallClick(elBall) {
             elBallTxt.innerText = gBall2CurrSize
         }
     }
+=======
+function onBallClick() {
+    const elBall = document.querySelector('.ball')
+    const elBallTxt = document.querySelector('.ball-text')
+    elBall.style.backgroundColor = getRandomColor()
+    if (gBallCurrSize < 400) {
+        const addSize = getRandomInt(20, 60)
+        elBall.style.height = gBallCurrSize + addSize + 'px'
+        elBall.style.width = gBallCurrSize + addSize + 'px'
+        gBallCurrSize += addSize
+        elBallTxt.innerText = gBallCurrSize
+    } else {
+        gBallCurrSize = 100
+        elBall.style.height = gBallCurrSize  + 'px'
+        elBall.style.width = gBallCurrSize  + 'px'
+       
+    }
+
+
+
 }
