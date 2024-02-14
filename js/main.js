@@ -73,13 +73,7 @@ function onFourBall() {
     elBall2.style.height = gBall2CurrSize + 'px'
     elBall2.style.width = gBall2CurrSize + 'px'
     elBall2.innerText = gBall2CurrSize
-
-
-
-
-
 }
-
 
 function onThirdBall() {
     const elBall1 = document.querySelector('.ball')
@@ -119,4 +113,9 @@ function switchBall1AndBall2Size() {
         elBall2.style.width = gBall2CurrSize + 'px'
         elBall2.innerText = gBall2CurrSize
     }
+}
+
+function onFifthBall(){
+    const elBody = document.querySelector('body')
+    elBody.style.backgroundColor=getRandomColor()
 }
