@@ -115,8 +115,28 @@ function switchBall1AndBall2Size() {
     }
 }
 
-function onFifthBall(){
+function onFifthBall() {
     const elBody = document.querySelector('body')
-    elBody.style.backgroundColor=getRandomColor()
+    elBody.style.backgroundColor = getRandomColor()
 }
 
+function onSixthBall() {
+    const elBall1 = document.querySelector('.ball')
+    const elBall2 = document.querySelector('.ball2')   
+    const elBody = document.querySelector('body')
+    
+    gBall1CurrSize = 100
+    gBall2CurrSize = 100
+    gIsBall3Clicked = false
+    
+    elBody.style.backgroundColor = 'rgb(19, 19, 19)'
+    elBall1.style.backgroundColor = 'darkkhaki'
+    elBall1.style.height = gBall1CurrSize + 'px'
+    elBall1.style.width = gBall1CurrSize + 'px'
+    elBall1.innerText = gBall1CurrSize
+
+    elBall2.style.backgroundColor = 'rgb(186, 111, 230)'
+    elBall2.style.height = gBall2CurrSize + 'px'
+    elBall2.style.width = gBall2CurrSize + 'px'
+    elBall2.innerText = gBall2CurrSize
+}
