@@ -119,3 +119,4 @@ function onFifthBall(){
     const elBody = document.querySelector('body')
     elBody.style.backgroundColor=getRandomColor()
 }
+
