@@ -71,3 +71,19 @@ h1{
     font-size: 22px;
     font-weight: bold;
 }
+
+.ball4{
+    grid-area:ball4 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+
+    width: 100px;
+    height: 100px;
+    background-color: rgb(42, 134, 110);
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: bold;
+}
