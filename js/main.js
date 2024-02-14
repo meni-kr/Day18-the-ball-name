@@ -124,7 +124,7 @@ function onSixthBall() {
     const elBall1 = document.querySelector('.ball')
     const elBall2 = document.querySelector('.ball2')   
     const elBody = document.querySelector('body')
-    
+
     gBall1CurrSize = 100
     gBall2CurrSize = 100
     gIsBall3Clicked = false
@@ -139,4 +139,8 @@ function onSixthBall() {
     elBall2.style.height = gBall2CurrSize + 'px'
     elBall2.style.width = gBall2CurrSize + 'px'
     elBall2.innerText = gBall2CurrSize
+}
+
+function hover(a){
+console.log('a:', a)
 }
