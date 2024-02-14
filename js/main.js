@@ -28,17 +28,17 @@ function onBallClick(elBall) {
             changeBallSize(currClass)
         } else {
             gBall1CurrSize += addSize
-            changeBallSize(currClass) 
+            changeBallSize(currClass)
         }
 
     } else {
 
         if (gBall2CurrSize + addSize > gMaxDiameter) {
             gBall2CurrSize = 100
-            changeBallSize(currClass) 
+            changeBallSize(currClass)
         } else {
             gBall2CurrSize += addSize
-            changeBallSize(currClass) 
+            changeBallSize(currClass)
         }
     }
 }
@@ -56,6 +56,29 @@ function changeBallSize(elBallClass) {
     }
 }
 
+function onFourBall() {
+    const elBall1 = document.querySelector('.ball')
+    const elBall2 = document.querySelector('.ball2')
+    const downSize = getRandomInt(20, 60)
+
+    if (gBall1CurrSize - downSize < 100 || gBall2CurrSize - downSize < 100) return
+
+    gBall1CurrSize -= downSize
+    gBall2CurrSize -= downSize
+
+    elBall1.style.height = gBall1CurrSize + 'px'
+    elBall1.style.width = gBall1CurrSize + 'px'
+    elBall1.innerText = gBall1CurrSize
+
+    elBall2.style.height = gBall2CurrSize + 'px'
+    elBall2.style.width = gBall2CurrSize + 'px'
+    elBall2.innerText = gBall2CurrSize
+
+
+
+
+
+}
 
 
 function onThirdBall() {
@@ -73,8 +96,6 @@ function onThirdBall() {
         gIsBall3Clicked = false
     }
 }
-
-
 
 function switchBall1AndBall2Size() {
     const elBall1 = document.querySelector('.ball')
