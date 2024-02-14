@@ -25,29 +25,34 @@ function onBallClick(elBall) {
 
         if (gBall1CurrSize + addSize > gMaxDiameter) {
             gBall1CurrSize = 100
-            elCurrBall.style.height = gBall1CurrSize + 'px'
-            elCurrBall.style.width = gBall1CurrSize + 'px'
-            elCurrBall.innerText = gBall1CurrSize
+            changeBallSize(currClass)
         } else {
             gBall1CurrSize += addSize
-            elCurrBall.style.height = gBall1CurrSize + 'px'
-            elCurrBall.style.width = gBall1CurrSize + 'px'
-            elCurrBall.innerText = gBall1CurrSize
+            changeBallSize(currClass) 
         }
 
     } else {
 
         if (gBall2CurrSize + addSize > gMaxDiameter) {
             gBall2CurrSize = 100
-            elCurrBall.style.height = gBall2CurrSize + 'px'
-            elCurrBall.style.width = gBall2CurrSize + 'px'
-            elCurrBall.innerText = gBall1CurrSize
+            changeBallSize(currClass) 
         } else {
             gBall2CurrSize += addSize
-            elCurrBall.style.height = gBall2CurrSize + 'px'
-            elCurrBall.style.width = gBall2CurrSize + 'px'
-            elCurrBall.innerText = gBall2CurrSize
+            changeBallSize(currClass) 
         }
+    }
+}
+
+function changeBallSize(elBallClass) {
+    const elCurrBall = document.querySelector(elBallClass)
+    if (elBallClass === '.ball') {
+        elCurrBall.style.height = gBall1CurrSize + 'px'
+        elCurrBall.style.width = gBall1CurrSize + 'px'
+        elCurrBall.innerText = gBall1CurrSize
+    } else {
+        elCurrBall.style.height = gBall2CurrSize + 'px'
+        elCurrBall.style.width = gBall2CurrSize + 'px'
+        elCurrBall.innerText = gBall2CurrSize
     }
 }
 
@@ -67,7 +72,6 @@ function onThirdBall() {
         switchBall1AndBall2Size()
         gIsBall3Clicked = false
     }
-
 }
 
 
@@ -75,26 +79,23 @@ function onThirdBall() {
 function switchBall1AndBall2Size() {
     const elBall1 = document.querySelector('.ball')
     const elBall2 = document.querySelector('.ball2')
-    
+
     if (!gIsBall3Clicked) {
         elBall1.style.height = gBall2CurrSize + 'px'
         elBall1.style.width = gBall2CurrSize + 'px'
-        elBall1.innerText =  gBall2CurrSize
-        
+        elBall1.innerText = gBall2CurrSize
+
         elBall2.style.height = gBall1CurrSize + 'px'
         elBall2.style.width = gBall1CurrSize + 'px'
-        elBall2.innerText =  gBall1CurrSize
-
+        elBall2.innerText = gBall1CurrSize
 
     } else {
         elBall1.style.height = gBall1CurrSize + 'px'
         elBall1.style.width = gBall1CurrSize + 'px'
-        elBall1.innerText =  gBall1CurrSize
-        
+        elBall1.innerText = gBall1CurrSize
+
         elBall2.style.height = gBall2CurrSize + 'px'
         elBall2.style.width = gBall2CurrSize + 'px'
-        elBall2.innerText =  gBall2CurrSize
-
+        elBall2.innerText = gBall2CurrSize
     }
-    
 }
